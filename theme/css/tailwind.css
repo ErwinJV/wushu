@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+    .custom-logo {
+        @apply w-[80px] h-[40px] bg-red-600 sm:me-3;
+    }
+}
