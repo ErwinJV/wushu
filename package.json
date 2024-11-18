@@ -5,8 +5,9 @@
   "author": "Erwin",
   "license": "MIT",
   "scripts": {
-    "tailwind:run": "tailwindcss -i ./theme/css/tailwind.css -o ./dist/styles.min.css --watch ",
-    "webpack:run": "webpack --watch --mode production"
+    "tailwind:run": "tailwindcss -i ./theme/css/tailwind.css -o ./dist/styles.min.css --watch",
+    "webpack:run": "webpack --watch --mode development",
+    "build":"webpack --mode production && tailwindcss -i ./theme/css/tailwind.css -o ./dist/styles.min.css --minify"
   },
   "devDependencies": {
     "@types/alpinejs": "^3.13.10",
