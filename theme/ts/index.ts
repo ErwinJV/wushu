@@ -1,3 +1,1 @@
-import {marginBodyHeader} from  './helpers'
-
-marginBodyHeader()
+console.log('index.ts')

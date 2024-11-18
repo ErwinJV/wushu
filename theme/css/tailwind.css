@@ -6,4 +6,16 @@
     .custom-logo {
         @apply w-[80px] h-[40px] bg-red-600 sm:me-3;
     }
+
+    #navigationList{
+      @apply flex flex-row;
+    }
+
+    @media screen and (max-width: 600px) {
+        #wpadminbar {
+          left: 0 !important;
+          position: fixed !important;
+          top:0 !important;
+        }
+      }
 }

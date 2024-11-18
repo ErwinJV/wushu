@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context:__dirname,
-  entry: './theme/ts/index.ts',
+  entry: ['./theme/ts/index.ts','./theme/ts/frontend.ts'],
   output: {
     filename: 'bundle.js',  
     path: path.resolve(__dirname, 'dist'),
