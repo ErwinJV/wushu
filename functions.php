@@ -4,6 +4,7 @@
 use theme\php\actions\EnqueueScript;
 use theme\php\actions\EnqueueStyle;
 use theme\php\actions\AddThemeSupport;
+use theme\php\actions\RegisterNavMenu;
 
 $dir_path = get_template_directory();
 $dir_uri = get_template_directory_uri();
@@ -104,6 +105,13 @@ $enqueue_styles = new EnqueueStyle(
          'version'=> '3.4.10',
          'media'=>'all'
       ],
+      [
+         'name'=>'box-icons-css',
+         'path_uri'=> 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
+         'deps'=>[],
+         'version'=>'2.1.4',
+         'media'=>'all'
+      ]
   ]
 );
 $enqueue_styles->run();
@@ -118,13 +126,18 @@ $custom_logo = [
 
 $theme_support = new AddThemeSupport(
    [
-      'post-thumbnails',
+      'post-thumbna',
       'widgets',
       ['custom-logo',$custom_logo],
    
    ]
 );
 $theme_support->run();
+
+$menu_navs = new RegisterNavMenu([
+   'navigation-links' => __('Navigation Links',SITE_NAME)
+]);
+$menu_navs->run();
 
 
 
