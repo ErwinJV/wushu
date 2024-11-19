@@ -6,9 +6,39 @@
     .custom-logo {
         @apply w-[80px] h-[40px] bg-red-600 sm:me-3;
     }
-
+    
+    #navigationLinks{
+      @apply w-[90%] hidden xl:flex;
+    }
     #navigationList{
-      @apply flex flex-row;
+      @apply w-[100%] flex flex-row justify-evenly ;
+    }
+
+    #navigationList li {
+      @apply text-[12px] mx-1 font-semibold text-white;
+    }
+    
+    #navigationLinksSm{
+      @apply  h-[100%] w-[100%] flex flex-col justify-center items-center ;
+    }
+    #navigationListSm{
+      @apply flex flex-col items-center h-[70%] w-[100%] ;
+    }
+
+    #navigationListSm li {
+      @apply text-xl text-white py-4;
+    }
+
+    #footerNavigationLinks{
+      @apply w-full h-full p-2 flex flex-row justify-center sm:justify-start ;
+    }
+
+    #footerNavigationList{
+       @apply flex flex-col h-full justify-evenly items-center sm:items-start;
+    }
+
+    #footerNavigationList li {
+       @apply text-white text-xs py-1;
     }
 
     @media screen and (max-width: 600px) {

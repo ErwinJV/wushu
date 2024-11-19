@@ -12,7 +12,7 @@
       <form action="<?php echo home_url('/'); ?>" role="search" method="get" class="inline-flex"  >
 
         <input
-           class="rounded focus:outline-none indent-1 w-36 sm:w-48 "
+           class="rounded focus:outline-none indent-1 w-36 sm:w-48 h-7 "
            name="s" id=""
            placeholder="Search..."
            value="<?php echo get_search_query(); ?>"
@@ -21,9 +21,9 @@
 
           <button type="submit"
                   value="Send"
-                  class="ms-2 bg-transparent"
+                  class="ms-2 bg-transparent flex flex-row items-center"
            >
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="bx bx-search text-2xl text-white"></i>
           </button>
      </form>
 
@@ -33,33 +33,33 @@ wp_nav_menu(
     [
         'theme_location' => 'navigation-links',
         'container_id' => 'navigationLinks',
-        'container_class'=> 'w-auto',
         'menu_id'=>'navigationList',
     ]
 );
 ?>
 
-    <!-- Toogle menu -->
+    <!-- Toggle menu -->
      
-        <div class="sm:hidden">
-            <i class="bx bx-menu text-4xl cursor-pointer" @click='onToggleMenu'></i>
+        <div class="xl:hidden">
+            <i class="bx bx-menu text-4xl cursor-pointer text-white" @click='onToggleMenu'></i>
         </div>
      </div>
     </nav>
  </header>
 
- <div class="absolute left-0 top-0 w-[100vw] h-[100vh] bg-black z-[500] sm:hidden opacity-70" x-show="open">
+ <div class="absolute left-0 top-0 w-[100vw] h-[100vh] bg-black opacity-70  xl:hidden " x-show="open">
         
-  <i class='bx bx-x absolute right-3 top-3 text-4xl text-white cursor-pointer' @click="onToggleMenu"></i>
+  <i class='bx bx-x absolute right-4 top-4 text-8xl text-white cursor-pointer' @click="onToggleMenu">
+  </i>
 
  <?php 
   wp_nav_menu(
     [
-        'theme_location' => 'navigation-links',
-        'container_id' => 'navigationLinks',
-        'menu_class' => 'flex flex-col items-center justify-center w-[90%]   gap-8 sm:gap-[4vw] mx-auto',
+        'theme_location' => 'navigation-links-sm',
+        'container_id' => 'navigationLinksSm',
+        'menu_id'=>'navigationListSm',   
     ]
-);
+  );
  ?>
  </div>
 
