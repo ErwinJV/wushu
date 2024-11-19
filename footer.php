@@ -1,38 +1,19 @@
-
-
-
- <footer class="w-full min-h-[90.5px] bg-stone-800 box-content">
+<footer class="w-full min-h-[90.5px] bg-stone-800 box-content p-3">
     <div class="container mx-auto h-full">
        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 h-full pt-2 ">
     <!-- Col -->
 
         <?php
 
-wp_nav_menu(
-    array(
-        'theme_location' => 'footer-navigation-links',
-        'container_class' => 'flex flex-col justify-center w-full',
-        'container_id' => 'footerNavigationLinks',
-        'menu_class' => 'flex flex-row w-full items-center justify-center ps-2 pb-2',
-    )
-);
-?>
-         <!-- <div class="flex flex-col justify-center w-full">
-            <ul class="flex flex-row w-full items-center justify-center ps-2 pb-2">
-                <li class="px-2">
-                    <a class="text-white hover:text-gray-500 text-[10px]" href="">Index</a>
-                </li>
-                <li class="px-2">
-                    <a class="text-white hover:text-gray-500 text-[10px]" href="">Menu</a>
-                </li>
-                <li class="px-2">
-                    <a class="text-white hover:text-gray-500 text-[10px]" href="">About Us</a>
-                </li>
-                <li class="px-2">
-                    <a class="text-white hover:text-gray-500 text-[10px]" href="">Contact</a>
-                </li>
-            </ul>
-         </div> -->
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'navigation-links-footer',
+                    'container_id' => 'footerNavigationLinks',
+                    'menu_id' => 'footerNavigationList',
+                )
+            );
+        ?>
+ 
          <!-- Col -->
           <div class="flex flex-col ps-2 pt-2 w-full">
             <h4 class="text-[10px] text-center sm:text-start text-white w-full font-bold pb-2">Contact:</h4>
@@ -49,9 +30,9 @@ wp_nav_menu(
          <h4 class="text-[10px] text-white w-full font-bold text-center pb-2">Social Media</h4>
 
          <ul class="flex flex-row justify-around w-full" >
-               <li><i class="fa-brands fa-facebook text-[24px] cursor-pointer text-sky-950"></i></li>
-               <li><i class="fa-brands fa-instagram text-[24px] cursor-pointer text-yellow-800"></i></li>
-               <li><i class="fa-brands fa-x-twitter text-[24px] cursor-pointer text-black"></i></li>
+               <li><i class="bx bxl-facebook text-[24px] cursor-pointer text-white"></i></li>
+               <li><i class="bx bxl-instagram-alt text-[24px] cursor-pointer text-yellow-800"></i></li>
+               <li><i class="bx bxl-twitter text-[24px] cursor-pointer text-blue-300"></i></li>
          </ul>
          </div>
          <!-- Col -->
@@ -59,9 +40,9 @@ wp_nav_menu(
          <h4 class="text-[10px] text-white w-full font-bold text-center pb-2">Payments</h4>
          <br/>
          <ul class="flex flex-row justify-around w-full" >
-               <li><i class="fa-brands fa-cc-paypal text-[24px] cursor-pointer text-sky-950"></i></li>
-               <li><i class="fa-brands fa-cc-mastercard text-[24px] cursor-pointer text-white"></i></li>
-               <li><i class="fa-brands fa-bitcoin text-[24px] cursor-pointer text-yellow-500"></i></li>
+               <li><i class="bx bxl-paypal text-[24px] cursor-pointer text-white"></i></li>
+               <li><i class="bx bxl-mastercard text-[24px] cursor-pointer text-white"></i></li>
+               <li><i class="bx bxl-bitcoin text-[24px] cursor-pointer text-yellow-500"></i></li>
          </ul>
          </div>
        </div>

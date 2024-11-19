@@ -126,7 +126,7 @@ $custom_logo = [
 
 $theme_support = new AddThemeSupport(
    [
-      'post-thumbna',
+      'post-thumbnails',
       'widgets',
       ['custom-logo',$custom_logo],
    
@@ -135,9 +135,13 @@ $theme_support = new AddThemeSupport(
 $theme_support->run();
 
 $menu_navs = new RegisterNavMenu([
-   'navigation-links' => __('Navigation Links',SITE_NAME)
+   'navigation-links' => __('Navigation Links',SITE_NAME),
+   'navigation-links-sm' => __('Navigation Links SM', SITE_NAME),
+   'navigation-links-footer'=> __('Navigation Links Footer',SITE_NAME)
 ]);
 $menu_navs->run();
+
+
 
 
 
