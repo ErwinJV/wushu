@@ -2,7 +2,7 @@
 
 $commenter = wp_get_current_commenter();
 $fields = [
-    'author'=> '<div class="flex flex-col lg:flex-row my-4">
+    'author'=> '<div class="flex flex-col lg:flex-row my-4 w-full">
                 <div class="flex flex-col  mb-2 md:mb-0 me-0 md:me-2">
                    <label class="py-2 font-bold" for="author">'.__("Author",SITE_NAME).'</label>
                    <input type="text" id="author" name="author" class="py-2 indent-1" placeholder="'.__("Author",SITE_NAME).'" value="'.$commenter['comment_author'].'" />
@@ -21,7 +21,7 @@ $fields = [
 ];
  $args =  [
     'id_form'           => 'commentForm',
-    'class_form'      => 'flex flex-col w-[90%] mt-8',
+    'class_form'      => 'flex flex-col w-[90%] ',
     'id_submit'         => 'submitComment',
     'class_submit'      => 'p-2 rounded bg-slate-300 cursor-pointer my-2',
     'name_submit'       => 'submit',
@@ -32,9 +32,9 @@ $fields = [
     'format'            => 'xhtml',
 
 
-    'comment_field' =>  '<div class="flex flex-col  me-2">
+    'comment_field' =>  '<div class="flex flex-col me-2 w-full">
                            <label for="comment" class="py-2 font-bold">' . _x( 'Comment', 'noun' ) .'</label>
-                           <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="form-control">' .
+                           <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="w-full">' .
                            '</textarea>
                         </div>',
 

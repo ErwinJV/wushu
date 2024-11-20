@@ -6,6 +6,10 @@
     .custom-logo {
         @apply w-[80px] h-[40px] bg-red-600 sm:me-3;
     }
+
+    .max-height{
+       height: calc(100vh - 50px);
+    }
     
     #navigationLinks{
       @apply w-[90%] hidden xl:flex;
@@ -40,6 +44,8 @@
     #footerNavigationList li {
        @apply text-white text-xs py-1;
     }
+
+
 
     @media screen and (max-width: 600px) {
         #wpadminbar {

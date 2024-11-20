@@ -1,6 +1,6 @@
 <?php 
 
-namespace theme\helpers\helpers;
+namespace theme\php\helpers;
 
 use \WP_Query;
 
