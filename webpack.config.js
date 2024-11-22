@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context:__dirname,
-  entry: ['./theme/ts/index.ts','./theme/ts/frontend.ts'],
+  entry: ['./theme/ts/index.ts','./theme/ts/alpine.ts','./theme/ts/swiper.ts'],
   output: {
     filename: 'bundle.js',  
     path: path.resolve(__dirname, 'dist'),
@@ -16,6 +16,10 @@ module.exports = {
         use:{
           loader:'ts-loader'
         }
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       }
     ]
   },

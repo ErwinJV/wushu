@@ -22,8 +22,8 @@
 /> -->
     <?php wp_head();?>
 </head>
-<body <?php body_class("relative")?> id="siteBody"  x-data="header" >
+<body <?php body_class()?>   x-data="header" >
     <!-- Loader -->
     <?php view('common.loader'); ?>
     <!-- Header Pad -->
-    <div id="headerPad"></div>
+  

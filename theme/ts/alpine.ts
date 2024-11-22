@@ -1,6 +1,6 @@
 import Alpine from "alpinejs"
 
-import { marginBodyHeader,onToggleMenu } from "./helpers"
+import { onToggleMenu } from "./helpers"
 import { HeaderFront } from "./schema";
 
 //@ts-ignore
@@ -14,8 +14,6 @@ Alpine.data("header", ():HeaderFront => ({
 
 Alpine.start()
 
-marginBodyHeader()
 
-document.addEventListener("alpine:init", () => {
- 
-})
+
+

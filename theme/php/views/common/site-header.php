@@ -1,5 +1,5 @@
 
-  <header class="bg-slate-400 flex flex-row items-center absolute left-0 top-0 h-[50px] z-100 w-full" id="siteHeader">
+  <header class="bg-slate-400 flex flex-row items-center h-[50px]  w-full" id="siteHeader">
     <nav class="flex justify-between items-center w-[92%]  mx-auto">
         <!-- Site Logotype -->
       <div class="custom-logo">
