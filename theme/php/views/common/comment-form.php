@@ -2,18 +2,18 @@
 
 $commenter = wp_get_current_commenter();
 $fields = [
-    'author'=> '<div class="flex flex-col lg:flex-row my-4 w-full">
-                <div class="flex flex-col  mb-2 md:mb-0 me-0 md:me-2">
-                   <label class="py-2 font-bold" for="author">'.__("Author",SITE_NAME).'</label>
-                   <input type="text" id="author" name="author" class="py-2 indent-1" placeholder="'.__("Author",SITE_NAME).'" value="'.$commenter['comment_author'].'" />
+    'author'=> '<div class="comment-form-group">
+                <div class="comment-input-group">
+                   <label class="comment-label-input" for="author">'.__("Author",SITE_NAME).'</label>
+                   <input type="text" id="author" name="author"  placeholder="'.__("Author",SITE_NAME).'" value="'.$commenter['comment_author'].'" />
                 </div>',
-   'email'=>'<div class="flex flex-col mb-2 md:mb-0 me-0 md:me-2">
-                 <label class="py-2 font-bold" for="email">'.__("Email",SITE_NAME).'</label>
-                 <input type="email" id="email" name="email" class="py-2 indent-1" placeholder="'.__("Email",SITE_NAME).'" value="'.$commenter['comment_author_email'].'" />
+   'email'=>'<div class="comment-input-group">
+                 <label class="comment-label-input" for="email">'.__("Email",SITE_NAME).'</label>
+                 <input type="email" id="email" name="email"  placeholder="'.__("Email",SITE_NAME).'" value="'.$commenter['comment_author_email'].'" />
              </div>',
-   'url'=> '<div class="flex flex-col mb-2 md:mb-0 me-0 md:me-2">
-                 <label class="py-2 font-bold" for="url">'.__("Url",SITE_NAME).'</label>
-                 <input type="text" id="url" name="url" class="py-2 indent-1" placeholder="'.__("Url",SITE_NAME).'" value="'.$commenter['comment_author_url'].'" />
+   'url'=> '<div class="comment-input-group">
+                 <label class="comment-label-input" for="url">'.__("Url",SITE_NAME).'</label>
+                 <input type="text" id="url" name="url" placeholder="'.__("Url",SITE_NAME).'" value="'.$commenter['comment_author_url'].'" />
             </div>
             </div>
             ',
@@ -21,9 +21,9 @@ $fields = [
 ];
  $args =  [
     'id_form'           => 'commentForm',
-    'class_form'      => 'flex flex-col w-[90%] ',
+    'class_form'      => 'comment-form',
     'id_submit'         => 'submitComment',
-    'class_submit'      => 'p-2 rounded bg-slate-300 cursor-pointer my-2',
+    'class_submit'      => 'p-2 bg-red',
     'name_submit'       => 'submit',
     'title_reply'       => __( 'Leave a Reply', SITE_NAME ),
     'title_reply_to'    => __( 'Leave a Reply to %s',SITE_NAME ),
@@ -32,9 +32,9 @@ $fields = [
     'format'            => 'xhtml',
 
 
-    'comment_field' =>  '<div class="flex flex-col me-2 w-full">
-                           <label for="comment" class="py-2 font-bold">' . _x( 'Comment', 'noun' ) .'</label>
-                           <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="w-full">' .
+    'comment_field' =>  '<div class="comment-input-group">
+                           <label for="comment" class="comment-input-label">' . _x( 'Comment', 'noun' ) .'</label>
+                           <textarea id="comment" name="comment"  aria-required="true" >' .
                            '</textarea>
                         </div>',
 

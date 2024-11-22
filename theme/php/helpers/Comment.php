@@ -24,29 +24,14 @@ class Comment {
            default:
         ?>
          
-         <li <?php comment_class('comment p-3 bg-green-200'); ?> id="li-comment-<?php comment_ID(); ?>" >
+         <li <?php comment_class('comment p-2 bg-white-100 w-full sm:w-[420px] rounded-sm shadow-lg'); ?> id="li-comment-<?php comment_ID(); ?>" >
             <article id="comment-<?php comment_ID(); ?>">
                 <div class="comment-meta">
                     <div class="comment-author vcard">
-                         <?php
-                           $args = [
-                              'class'=> 'avatar avatar-60 photo'
-                           ];
-                          echo get_avatar($comment,60);
-
-                         ?>
-
-                         <?php 
-                            printf(__('<b class="fn">%s</b> <span class="says hide">says:</span>',SITE_NAME),
-                            sprintf('<cite class="fn">%s</cite>',get_comment_author_link()));
-                            ;
-                         ?>
-
-                         <div class="comment-context">
-                            <?php comment_text(); ?>
-                         </div>
-
-                          <div class="comment-metadata">
+                     <!-- Comment header -->
+                      <div class="flex flex-row justify-between items-center">
+                       <?php echo get_avatar($comment,30); ?>
+                         <div class="comment-metadata  text-xs italic font-bold">
                             <a href="<?php echo esc_url(get_comment_link($comment->comment_ID));?>">
                                <time pubdate datetime="<?php comment_time('c'); ?>">
                                   <?php
@@ -58,10 +43,24 @@ class Comment {
                                   ?>
                                </time>
                             </a>
-                            <?php edit_comment_link(__('(Edit)',SITE_NAME),' '); ?>
+                            <span class="font-semibold"><?php edit_comment_link(__('(Edit)',SITE_NAME),' '); ?></span>
                           </div>
 
-                          <div class="reply">
+                      </div>
+                        
+                         <!-- Comment text -->
+                         <div class="comment-context">
+                              <?php 
+                                printf(__('<b class="fn">%s</b> <span class="says hide">says:</span>',SITE_NAME),
+                                sprintf('<cite class="fn">%s</cite>',get_comment_author_link()));
+                                ;
+                              ?>
+                                <?php comment_text(); ?>
+                         </div>
+
+                          
+
+                          <div class="font-semibold text-xs italic">
                             <?php comment_reply_link(array_merge($args,['depth'=>$depth])); ?>
                           </div>
 

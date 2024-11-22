@@ -3,12 +3,12 @@
 
 
     
-    <div class="grid grid-cols-12   ">
-        <article class="col-span-12 md:col-span-6 flex flex-col max-height overflow-y-auto">
+    <div class="grid grid-cols-12 min-height">
+        <article class="col-span-12  max-height overflow-y-auto">
            <h1 class="text-4xl my-5"><?php echo get_the_title(); ?></h1>
            <?php the_content() ?>
         </article>
-        <section class="col-span-12 md:col-span-6 flex flex-row justify-center ">
+        <section class="col-span-12 flex flex-col px-6 ">
            <?php if(comments_open() || get_comments_number()): ?>
               <?php comments_template(); ?>
             <?php endif; ?>
