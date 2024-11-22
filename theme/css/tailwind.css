@@ -2,50 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer{
-    .custom-logo {
-        @apply w-[80px] h-[40px] bg-red-600 sm:me-3;
-    }
-    
-    #navigationLinks{
-      @apply w-[90%] hidden xl:flex;
-    }
-    #navigationList{
-      @apply w-[100%] flex flex-row justify-evenly ;
-    }
+@layer {
+  
+  input,
+  textarea {
+    @apply bg-slate-100;
+  }
+  .custom-logo {
+    @apply w-[80px] h-[40px] bg-red-600 sm:me-3;
+  }
 
-    #navigationList li {
-      @apply text-[12px] mx-1 font-semibold text-white;
-    }
-    
-    #navigationLinksSm{
-      @apply  h-[100%] w-[100%] flex flex-col justify-center items-center ;
-    }
-    #navigationListSm{
-      @apply flex flex-col items-center h-[70%] w-[100%] ;
-    }
 
-    #navigationListSm li {
-      @apply text-xl text-white py-4;
-    }
 
-    #footerNavigationLinks{
-      @apply w-full h-full p-2 flex flex-row justify-center sm:justify-start ;
-    }
+.comment-respond{
+  @apply w-[95%] py-6;
+}
 
-    #footerNavigationList{
-       @apply flex flex-col h-full justify-evenly items-center sm:items-start;
-    }
+  .comment-form-group {
+    @apply flex flex-col;
+  }
 
-    #footerNavigationList li {
-       @apply text-white text-xs py-1;
-    }
+  .comment-input-group {
+    @apply flex flex-col py-3;
+  }
 
-    @media screen and (max-width: 600px) {
-        #wpadminbar {
-          left: 0 !important;
-          position: fixed !important;
-          top:0 !important;
-        }
-      }
+  .comment-input-group input {
+    @apply w-[100%] sm:w-[298px] indent-1 h-[40px];
+  }
+
+  .comment-input-group textarea {
+    @apply  w-[100%] sm:w-[298px] h-[120px];
+  }
+
+  .comment-label-input {
+    @apply pb-1;
+  }
+
+  #navigationLinks {
+    @apply w-[90%] hidden xl:flex;
+  }
+  #navigationList {
+    @apply w-[100%] flex flex-row justify-evenly;
+  }
+
+  #navigationList li {
+    @apply text-[12px] mx-1 font-semibold text-white;
+  }
+
+  #navigationLinksSm {
+    @apply h-[100%] w-[100%] flex flex-col justify-center items-center;
+  }
+  #navigationListSm {
+    @apply flex flex-col items-center h-[70%] w-[100%];
+  }
+
+  #navigationListSm li {
+    @apply text-xl text-white py-4;
+  }
+
+  #footerNavigationLinks {
+    @apply w-full h-full p-2 flex flex-row justify-center sm:justify-start;
+  }
+
+  #footerNavigationList {
+    @apply flex flex-col h-full justify-evenly items-center sm:items-start;
+  }
+
+  #footerNavigationList li {
+    @apply text-white text-xs py-1;
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    #wpadminbar {
+      left: 0 !important;
+      position: fixed !important;
+      top: 0 !important;
+    }
+  }
 }

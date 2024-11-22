@@ -1,4 +1,4 @@
-<footer class="w-full min-h-[90.5px] bg-stone-800 box-content p-3">
+<footer class="w-full min-h-[90.5px] bg-stone-800 box-content p-3 ">
     <div class="container mx-auto h-full">
        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 h-full pt-2 ">
     <!-- Col -->

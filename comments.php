@@ -11,19 +11,19 @@ if(post_password_required()){
 $comment = new Comment();
 
 ?>
-<div id="comments" class="flex flex-col">
+<div id="comments" class="comments">
    <?php if(have_comments()): ?>
     <h2 class="text-2xl mb-3">
-      <?php echo __('Posts comments','sushi'); ?>
+      <?php echo __('Posts comments',SITE_NAME); ?>
     </h2>
 
-    <ol class="bg-white w-[90%]">
+    <ol class="bg-white">
        <?php wp_list_comments(
-         array(
+         [
             'type'=>'comment',
              'callback'=> [$comment,'view_comments']
 
-         )
+         ]
        ); ?>
     </ol>
    <?php endif; ?>
