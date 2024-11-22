@@ -50,13 +50,15 @@
 </footer>
 <script>
    const pageLoader = document.getElementById('pageLoader')
-
-   window.onload = ()=>{
+    if(pageLoader){
+        window.onload = ()=>{
     setTimeout(()=>{
        pageLoader.style.display = 'none'
-},1200)
+     },1200) 
+    }
+    }
 
-   }
+   
 </script>
 <?php wp_footer();?>
 </body>

@@ -5,6 +5,12 @@
  get_header();
 ?>
 
-<h1 class="text-4xl">Calendar</h1>
+
+
+
+<section class="container mx-auto py-12">
+<?php the_content(); ?>
+</section>
+
 
 <?php get_footer(); ?>
